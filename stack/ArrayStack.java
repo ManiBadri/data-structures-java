@@ -23,7 +23,7 @@ public class ArrayStack<T> {
 
     public T pop(){
         if(top == -1)
-            throw new IllegalStateException("Stack e        mpty");
+            throw new IllegalStateException("Stack empty");
         T temp = arr[top];
         arr[top] = null;
         top--;
