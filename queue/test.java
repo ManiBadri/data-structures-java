@@ -15,16 +15,17 @@ public class test {
         queue.enqueue(12);
 
         System.out.println();
-        System.out.print("Top:" + queue.top());
-
-        System.out.println();
-        System.out.println("Dequeued:" + queue.dequeue().val);
-        System.out.println("Dequeued:" + queue.dequeue().val);
-        System.out.println("Dequeued:" + queue.dequeue().val);
-        System.out.println("Dequeued:" + queue.dequeue().val);
-        System.out.println("Dequeued:" + queue.dequeue().val);
         
         queue.clear();
+
+
+
+
+        ArrayQueue arr = new ArrayQueue<Integer>(10);
+        arr.queue(10);
+        System.out.print("Top: " + arr.top());
+
+        
     }
     
 

@@ -9,14 +9,15 @@ public class ArrayQueue<T> {
     public ArrayQueue(int capacity) {
         arr = (T[]) new Object[capacity];
         head = -1;
-        tail = -1;
+        tail = 0;
     }
 
 
     public void queue(T item){
-        if(head + 1 == tail) //rework?
+        if(head + 1 == tail && head != -1) //rework?
             throw new IllegalStateException("Queue full");
-        
+        if(head == arr.length - 1 && tail == 0)
+            throw new IllegalStateException("Queue full");
         
         head++;
         if(head > arr.length)
@@ -25,7 +26,10 @@ public class ArrayQueue<T> {
     }
 
     public T dequeue(){
-        return null; //?
+        T temp = arr[tail];
+        arr[tail] = null;
+        tail++;
+        return temp;
     }
 
     public T top(){
