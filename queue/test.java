@@ -24,8 +24,10 @@ public class test {
         ArrayQueue arr = new ArrayQueue<Integer>(10);
         arr.queue(10);
         System.out.print("Top: " + arr.top());
+        arr.dequeue();
+        arr.queue(10);
 
-        
+
     }
     
 

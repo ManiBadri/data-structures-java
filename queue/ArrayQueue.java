@@ -26,6 +26,9 @@ public class ArrayQueue<T> {
     }
 
     public T dequeue(){
+        if(head == -1 || tail > head)
+            throw new IllegalStateException("Queue empty");
+
         T temp = arr[tail];
         arr[tail] = null;
         tail++;
