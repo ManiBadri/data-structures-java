@@ -5,33 +5,35 @@ public class ArrayQueue<T> {
     private T[] arr;
     private int head;
     private int tail;
+    private int size;
 
     public ArrayQueue(int capacity) {
         arr = (T[]) new Object[capacity];
         head = -1;
         tail = 0;
+        size = 0;
     }
 
 
     public void queue(T item){
-        if(head + 1 == tail && head != -1) //rework?
-            throw new IllegalStateException("Queue full");
-        if(head == arr.length - 1 && tail == 0)
-            throw new IllegalStateException("Queue full");
+        if(size == arr.length)
+            throw new IllegalStateException("Queue is full");
         
         head++;
-        if(head > arr.length)
+        size++;
+        if(head + 1 == arr.length)
             head = 0;
         arr[head] = item;
     }
 
     public T dequeue(){
-        if(head == -1 || tail > head)
+        if(size == 0)
             throw new IllegalStateException("Queue empty");
 
         T temp = arr[tail];
         arr[tail] = null;
         tail++;
+        size--;
         return temp;
     }
 

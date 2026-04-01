@@ -23,9 +23,22 @@ public class test {
 
         ArrayQueue arr = new ArrayQueue<Integer>(10);
         arr.queue(10);
-        System.out.print("Top: " + arr.top());
-        arr.dequeue();
         arr.queue(10);
+        System.out.println("Top: " + arr.top());
+        arr.dequeue();
+        arr.dequeue();
+        arr.queue(1);
+        arr.queue(2);
+        arr.queue(3);
+        arr.queue(4);
+        arr.queue(5);
+        arr.queue(6);
+        arr.queue(7);
+        arr.queue(8);
+        arr.queue(9);
+        arr.queue(10);
+
+        System.out.println("Top: " + arr.top());
 
 
     }
