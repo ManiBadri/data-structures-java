@@ -2,7 +2,6 @@ package LinkedList;
 
 public class LinkedList<T> {
     
-
     class Node<T>{
         T val;
         Node next;
@@ -21,8 +20,6 @@ public class LinkedList<T> {
         head = null;
     }
 
-
-
     public void insert(T item){
         if(head == null)
             head = new Node<T>(item, null);
@@ -38,11 +35,32 @@ public class LinkedList<T> {
 
     public void delete(T item){
         Node q = head;
+        Node p = head;
         while(q.val != item){
             if(q.next == null)
                 return;
             q = q.next;
         }
-        
+        while(p.next != q)
+            p = p.next;
+        q = q.next;
+        p.next = q;
+
     }
+
+    public boolean search(T item){
+        Node q = head;
+        while(q.next == null){
+            if(q.val == item)
+                return true;
+        }
+        return false;
+    }
+
+    public boolean isEmpty(){
+        return (head == null);
+    }
+
+    
+
 }
