@@ -61,6 +61,15 @@ public class LinkedList<T> {
         return (head == null);
     }
 
+
+    public void iterator(){
+        Node q = head;
+        while(q != null){
+            System.out.println(q.val);
+            q = q.next;
+        }
+    }
+
     
 
 }
