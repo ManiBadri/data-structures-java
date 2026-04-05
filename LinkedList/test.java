@@ -16,6 +16,17 @@ public class test {
         myList.delete(3);
 
 
+        DoublyLinkedList<Integer> myDoublyList = new DoublyLinkedList<>();
+        myDoublyList.insert(1);
+        myDoublyList.insert(2);
+        myDoublyList.insert(3);
+        myDoublyList.insert(4);
+        myDoublyList.insert(5);
+
+        
+
+
+
 
 
     }

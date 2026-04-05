@@ -2,7 +2,6 @@ package LinkedList;
 
 public class DoublyLinkedList<T> {
 
-
     class Node<T>{
         Node next;
         Node prev;
@@ -42,7 +41,6 @@ public class DoublyLinkedList<T> {
         q.next = q.next.next;
     }
 
-
     public void iterator(){
         Node q = head;
         while(q != null){
@@ -51,6 +49,15 @@ public class DoublyLinkedList<T> {
 
         }
         
+    }
+
+    public boolean search(T item){
+        Node q = head;
+        while(q != null){
+            if(q.val == item)
+                return true; 
+        }
+        return false;
     }
     
 }
