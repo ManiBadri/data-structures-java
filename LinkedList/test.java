@@ -13,6 +13,7 @@ public class test {
 
         myList.iterator();
 
+        myList.delete(3);
 
 
 

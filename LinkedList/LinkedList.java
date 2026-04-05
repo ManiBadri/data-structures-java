@@ -8,13 +8,11 @@ public class LinkedList<T> {
         public Node(T val, Node next){
             this.val = val;
             this.next = next;
-
         }
 
     }
 
     private Node<T> head;
-    //private int size;
 
     public void LinkedList(){
         head = null;
