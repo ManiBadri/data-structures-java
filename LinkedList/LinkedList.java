@@ -48,7 +48,7 @@ public class LinkedList<T> {
 
     public boolean search(T item){
         Node q = head;
-        while(q.next == null){
+        while(q.next != null){
             if(q.val == item)
                 return true;
         }

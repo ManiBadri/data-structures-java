@@ -11,9 +11,6 @@ public class test {
         myList.insert(4);
         myList.insert(5);
 
-        myList.iterator();
-
-        myList.delete(3);
 
 
         DoublyLinkedList<Integer> myDoublyList = new DoublyLinkedList<>();
@@ -22,7 +19,12 @@ public class test {
         myDoublyList.insert(3);
         myDoublyList.insert(4);
         myDoublyList.insert(5);
-
+        System.out.println("Start:");
+        myDoublyList.iterator();
+        myDoublyList.delete(3);
+        System.out.println("After:");
+        myDoublyList.iterator();
+        System.out.println("found: " + myDoublyList.search(3));
         
 
 

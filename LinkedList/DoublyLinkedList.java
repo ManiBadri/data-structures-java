@@ -33,12 +33,14 @@ public class DoublyLinkedList<T> {
     public void delete(T item){
         Node q = head;
         while(q.val != item){
-            if(q != null)
+            if(q == null)
                 return;
             q = q.next;
         }
         q = q.prev;
-        q.next = q.next.next;
+        Node p = q;
+        p = p.next;
+        q.next = p.next;
     }
 
     public void iterator(){
@@ -59,5 +61,11 @@ public class DoublyLinkedList<T> {
         }
         return false;
     }
+
+    public boolean isEmpty(){
+        return (head == null);
+    }
     
+
+
 }
