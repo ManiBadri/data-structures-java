@@ -53,6 +53,11 @@ public class LinkedListQueue<T> {
         head = null;
     }
 
+
+    public boolean isEmpty(){
+        return (head == null);
+    }
+
     
 
 }
